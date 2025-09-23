@@ -5,8 +5,8 @@ def calculo_bonus(nome, salario, porcentagem):
 def main():
     try:    
         nome = input("Digite seu nome: ")
-        if not nome.isalpha():
-            raise ValueError("alpha")
+        if not nome.replace(" ", "").isalpha():
+            raise ValueError("NOME_INVALIDO")
         
         salario = input("Digite seu salario: ")
         porcentagem = input("Digite sua porcentagem de bonus: ")
@@ -14,16 +14,18 @@ def main():
         try:
             salario = float(salario)
             porcentagem = float(porcentagem)
-        except TypeError:
-            raise ("numeros")
+        except ValueError:
+            raise ValueError("NUMERO_INVALIDO")
         
         print(calculo_bonus(nome, salario, porcentagem))
 
     except ValueError as e:
-        if "alpha" in str(e):
-            print("Nome aceita apenas letras.")
-    except TypeError as e:
-        if "numeros" in str(e):
-            print("Apenas numeros.")
+        error_code = str(e)
+        if error_code == "NOME_INVALIDO":
+            print("Erro: o nome informado deve conter apenas letras.")
+        elif error_code == "NUMERO_INVALIDO":
+            print("Erro: apenas números são aceitos.")
+        else:
+            print(f"Erro inesperado: {e}")
 
 main()
