@@ -1,6 +1,6 @@
-# 🐍 Bootcamp Python — Do Zero ao Avançado
+# 🐍 Bootcamp Python — Jornada de Dados
 
-Este repositório reúne todo o conteúdo do **Bootcamp Python**, um intensivo único voltado para quem deseja aprender Python do zero e evoluir até tópicos avançados como APIs e manipulação de banco de dados. A proposta é prática e progressiva, com foco em resolver problemas reais e construir projetos aplicáveis.
+Este repositório reúne todo o conteúdo do **Bootcamp Python** promovido pela [Jornada de Dados](https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Bootcamp%20-%20Python%20para%20dados), um intensivo único voltado para quem deseja aprender Python do zero e evoluir até tópicos avançados como APIs e manipulação de banco de dados. A proposta é prática e progressiva, com foco em resolver problemas reais e construir projetos aplicáveis.
 
 ## 🚀 Objetivo
 
