@@ -171,40 +171,19 @@ vendas = [
     {'id': 10, 'categoria': 'Roupas', 'valor': 180.00},
 ]
 
-total_roupas = 0
-total_eletros = 0
-total_alimentos = 0
-total_livros = 0
+totais = {}
 
-for registros in vendas:
-    if registros['categoria']== 'Roupas':
-        total_roupas += registros['valor']
-    elif registros['categoria'] == 'Eletrônicos':
-        total_eletros += registros['valor']
-    elif registros['categoria'] == 'Alimentos':
-        total_alimentos += registros['valor']
-    elif registros['categoria'] == 'Livros':
-        total_livros += registros['valor']
+for registro in vendas:
+    categoria = registro['categoria']
+    valor = registro['valor']
 
-print(f'Total de vendas roupas: R${total_roupas}')
-print(f'Total de vendas eletrônicos: R${total_eletros}')
-print(f'Total de vendas alimentos: R${total_alimentos}')
-print(f'Total de vendas livros: R${total_livros}')
+    if categoria in totais:
+        totais[categoria] += valor
+    else:
+        totais[categoria] = valor
+
+for categoria, total in totais.items():
+    print(f'Total de vendas para {categoria.lower()}: R${total:.2f}')
 
 
-### Exercícios com WHILE
 
-### Exercício 11. Leitura de Dados até Flag
-# Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
-
-### Exercício 12. Validação de Entrada
-# Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
-
-### Exercício 13. Consumo de API Simulado
-# Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
-
-### Exercício 14. Tentativas de Conexão
-# Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
-
-### Exercício 15. Processamento de Dados com Condição de Parada
-# Processar itens de uma lista até encontrar um valor específico que indica a parada.
