@@ -4,31 +4,43 @@ def calculo_bonus(nome, salario, porcentagem):
     
 
 def main():
-    while True:
+
+    nome_valido = False
+    salario_valido = False
+    porcentagem_valida = False
+   
+    while not nome_valido:
         try:    
             nome = input("Digite seu nome: ")
-            if not nome.replace(" ", "").isalpha():
-                raise ValueError("NOME_INVALIDO")
-            
-            salario = input("Digite seu salario: ")
-            porcentagem = input("Digite sua porcentagem de bonus: ")
-
-            try:
-                salario = float(salario)
-                porcentagem = float(porcentagem)
-            except ValueError:
-                raise ValueError("NUMERO_INVALIDO")
-            
-            print(calculo_bonus(nome, salario, porcentagem))
-            break
-
-        except ValueError as e:
-            error_code = str(e)
-            if error_code == "NOME_INVALIDO":
-                print("Erro: o nome informado deve conter apenas letras.")
-            elif error_code == "NUMERO_INVALIDO":
-                print("Erro: apenas números são aceitos.")
+            if len(nome) == 0:
+                 raise ValueError("Erro: o nome não pode estar vazio.")
+            elif any(char.isdigit() for char in nome):
+                 raise ValueError("Erro: o nome deve conter apenas letras.")
             else:
-                print(f"Erro inesperado: {e}")
-
+                 nome_valido = True
+        except ValueError as e:
+             print(e)
+            
+    while not salario_valido:
+            try:
+                salario = float(input("Digite seu salario: "))
+                if salario <= 0:
+                    print("Erro: o salário não pode ser igual ou inferior a zero.")
+                else:
+                     salario_valido = True        
+            except ValueError as e:
+                print(e)
+    
+    while not porcentagem_valida:
+            try:
+                porcentagem = float(input("Digite sua porcentagem de bonus: "))
+                if porcentagem <= 0:
+                     print("Erro: a porcentagem não pode ser igual ou inferior a zero.") 
+                else:
+                     porcentagem_valida = True       
+            except ValueError as e:
+                 print(e)
+            
+    print(calculo_bonus(nome, salario, porcentagem))
+            
 main()
