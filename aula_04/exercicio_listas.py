@@ -38,6 +38,22 @@
 # 4 Escreva um programa que conta o número de ocorrências de cada 
 # caractere em uma string usando um dicionário.
 
+def contagem_ocorrencias(frase: str) -> dict:
+    dicionario: dict = {}
+    frase = frase.lower().strip()
+    for caracter in frase:
+        #if caracter in string.punctuation or caracter == '':
+        if not caracter.isalpha():
+            pass
+        elif not caracter in dicionario:
+            dicionario[caracter] = 1
+        else:
+            dicionario[caracter] += 1
+    return dicionario
+
+#caracter_especiais = string.punctuation
+frase: str = input('Escreva o que quiser: ')
+print(contagem_ocorrencias(frase))
 
 # 5 Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65},
 # calcule o preço total da lista de compras.
