@@ -62,12 +62,28 @@
 # 9. Agregação de Dados
 # Objetivo: Dado um conjunto de números, calcular a média.
 
-numeros = [10, 40, 30, 20, 80, 50, 90, 60]
-media = sum(numeros) / len(numeros)
-print(media)
+# numeros = [10, 40, 30, 20, 80, 50, 90, 60]
+# media = sum(numeros) / len(numeros)
+# print(media)
 
 # 10. Divisão de Dados em Grupos
 # Objetivo: Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
+
+valores = list(range(1,30))
+even = []
+odds = []
+
+# for num in valores:
+#     if num % 2 == 0: 
+#         odds.append(num)
+#     else: 
+#         even.append(num)
+
+odds = list(filter(lambda x: x % 2==0, valores))
+even = list(filter(lambda x: x % 2!=0, valores))
+
+print(even)
+print(odds)
 
 # 11. Atualização de Dados
 # Objetivo: Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
