@@ -88,64 +88,79 @@
 # 11. Atualização de Dados
 # Objetivo: Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
 
-produtos: list = [
-    {
-        "id": 1,
-        "nome": "Notebook Dell Inspiron",
-        "categoria": "Eletrônicos",
-        "preco": 3899.90,
-        "estoque": 12
-    },
-    {
-        "id": 2,
-        "nome": "Smartphone Samsung Galaxy S23",
-        "categoria": "Celulares",
-        "preco": 4999.00,
-        "estoque": 8
-    },
-    {
-        "id": 3,
-        "nome": "Fone de Ouvido Bluetooth JBL",
-        "categoria": "Acessórios",
-        "preco": 349.99,
-        "estoque": 25
-    },
-    {
-        "id": 4,
-        "nome": "Cadeira Gamer ThunderX3",
-        "categoria": "Móveis",
-        "preco": 1299.90,
-        "estoque": 5
-    },
-    {
-        "id": 5,
-        "nome": "Monitor LG UltraWide 29''",
-        "categoria": "Eletrônicos",
-        "preco": 1599.00,
-        "estoque": 7
-    }
-]
+# produtos: list = [
+#     {
+#         "id": 1,
+#         "nome": "Notebook Dell Inspiron",
+#         "categoria": "Eletrônicos",
+#         "preco": 3899.90,
+#         "estoque": 12
+#     },
+#     {
+#         "id": 2,
+#         "nome": "Smartphone Samsung Galaxy S23",
+#         "categoria": "Celulares",
+#         "preco": 4999.00,
+#         "estoque": 8
+#     },
+#     {
+#         "id": 3,
+#         "nome": "Fone de Ouvido Bluetooth JBL",
+#         "categoria": "Acessórios",
+#         "preco": 349.99,
+#         "estoque": 25
+#     },
+#     {
+#         "id": 4,
+#         "nome": "Cadeira Gamer ThunderX3",
+#         "categoria": "Móveis",
+#         "preco": 1299.90,
+#         "estoque": 5
+#     },
+#     {
+#         "id": 5,
+#         "nome": "Monitor LG UltraWide 29''",
+#         "categoria": "Eletrônicos",
+#         "preco": 1599.00,
+#         "estoque": 7
+#     }
+# ]
 
-def atualizar_preco(id: int, preco: float):
-    for produto in produtos:
-        if produto["id"] == id:
-            produto["preco"] = preco
-    return True
+# def atualizar_preco(id: int, preco: float):
+#     for produto in produtos:
+#         if produto["id"] == id:
+#             produto["preco"] = preco
+#     return True
 
-id_produto = int(input('Insira o ID do produto: '))
-novo_preco = float(input('Insira o novo preço: '))
+# id_produto = int(input('Insira o ID do produto: '))
+# novo_preco = float(input('Insira o novo preço: '))
 
-atualizar_preco(id_produto, novo_preco)
-print(produtos)
-
-    
-
+# atualizar_preco(id_produto, novo_preco)
+# print(produtos)
 
 # 12. Fusão de Dicionários
 # Objetivo: Dados dois dicionários, fundi-los em um único dicionário.
 
+dados_pessoais = {
+    "nome": "Rafael",
+    "idade": 30,
+    "cidade": "Campina Grande"
+}
+
+dados_profissionais = {
+    "profissão": "Desenvolvedor",
+    "empresa": "Tech Solutions",
+    "experiência": 5
+}
+
+novo_dicinario = dados_pessoais | dados_profissionais
+
+print(novo_dicinario)
+
 # 13. Filtragem de Dados em Dicionário
 # Objetivo: Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+
+
 
 # 14. Extração de Chaves e Valores
 # Objetivo: Dado um dicionário, criar listas separadas para suas chaves e valores.
