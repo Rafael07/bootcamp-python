@@ -141,30 +141,78 @@
 # 12. Fusão de Dicionários
 # Objetivo: Dados dois dicionários, fundi-los em um único dicionário.
 
-dados_pessoais = {
-    "nome": "Rafael",
-    "idade": 30,
-    "cidade": "Campina Grande"
-}
+# dados_pessoais = {
+#     "nome": "Rafael",
+#     "idade": 30,
+#     "cidade": "Campina Grande"
+# }
 
-dados_profissionais = {
-    "profissão": "Desenvolvedor",
-    "empresa": "Tech Solutions",
-    "experiência": 5
-}
+# dados_profissionais = {
+#     "profissão": "Desenvolvedor",
+#     "empresa": "Tech Solutions",
+#     "experiência": 5
+# }
 
-novo_dicinario = dados_pessoais | dados_profissionais
+# novo_dicinario = dados_pessoais | dados_profissionais
 
-print(novo_dicinario)
+# print(novo_dicinario)
 
 # 13. Filtragem de Dados em Dicionário
 # Objetivo: Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
 
+# estoque = {
+#     'maçã': 10,
+#     'banana': 0,
+#     'laranja': 5,
+#     'uva': 0,
+#     'abacaxi': 3
+# }
 
+# estoque_real = {produto: quantidade for produto, quantidade in estoque.items() if quantidade > 0}
+
+# print(estoque_real)
 
 # 14. Extração de Chaves e Valores
 # Objetivo: Dado um dicionário, criar listas separadas para suas chaves e valores.
 
+# estoque = {
+#     'maçã': 10,
+#     'banana': 2,
+#     'laranja': 5,
+#     'uva': 7,
+#     'abacaxi': 3
+# }
+
+# produtos =[]
+# quantias =[]
+
+# for produto, quantidade in estoque.items():
+#     produtos.append(produto)
+#     quantias.append(quantidade)
+
+# print(produtos)
+# print(quantias)
+
+
 # 15. Contagem de Frequência de Itens
 # Objetivo: Dada uma string, contar a frequência de cada caractere usando um dicionário.
+
+import string
+
+def contador_de_letras(frase):
+    contador = {}
+    for letra in frase:
+        letra = letra.strip(string.punctuation).lower()
+        if letra and not letra.isspace():
+            if letra in contador:
+                contador[letra] += 1
+            else:
+                contador[letra] = 1
+    return contador
+    
+
+minha_string = input("Insira uma palavra ou frase: ")
+print(contador_de_letras(minha_string))
+
+
 
