@@ -59,16 +59,35 @@
 # 3. Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
 # ----------------------------------------------------------------------------------------------
 
-def string_reversa(uma_string: str) -> str:
+# def string_reversa(uma_string: str) -> str:
+#     return ''.join(reversed(uma_string))
 
-    return ''.join(reversed(uma_string))
-
-nova_string = input("Insira uma string: ")
-print(string_reversa(nova_string))
+# nova_string = input("Insira uma string: ")
+# print(string_reversa(nova_string))
 
 # 4. Implemente uma função que receba dois argumentos: uma lista de números e um número. 
 # A função deve retornar todas as combinações de pares na lista que somem ao número dado.
 # ----------------------------------------------------------------------------------------------
+
+def combinacao_numeros(lista: list, numero: int) -> list:
+    possibilidades: list = []
+    for i in lista:
+        for j in lista:    
+            if i + j == numero and i != j:
+                pair = ((min(i,j),max(i,j)))
+                if pair not in possibilidades:
+                    possibilidades.append(pair)
+    return possibilidades
+
+import random
+
+lista = [(random.randint(1,50)) for _ in range(1,50)]
+numero = int(input('Insira um numero: '))
+
+pares = combinacao_numeros(lista, numero)
+print(f'Lista: {lista}')
+print(f'Combinações possíves: {pares}')
+
 
 # 5. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
 # ----------------------------------------------------------------------------------------------
