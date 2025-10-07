@@ -69,25 +69,39 @@
 # A função deve retornar todas as combinações de pares na lista que somem ao número dado.
 # ----------------------------------------------------------------------------------------------
 
-def combinacao_numeros(lista: list, numero: int) -> list:
-    possibilidades: list = []
-    for i in lista:
-        for j in lista:    
-            if i + j == numero and i != j:
-                pair = ((min(i,j),max(i,j)))
-                if pair not in possibilidades:
-                    possibilidades.append(pair)
-    return possibilidades
+# def combinacao_numeros(lista: list, numero: int) -> list:
+#     possibilidades: list = []
+#     for i in lista:
+#         for j in lista:    
+#             if i + j == numero and i != j:
+#                 pair = ((min(i,j),max(i,j)))
+#                 if pair not in possibilidades:
+#                     possibilidades.append(pair)
+#     return possibilidades
 
-import random
+# import random
 
-lista = [(random.randint(1,50)) for _ in range(1,50)]
-numero = int(input('Insira um numero: '))
+# lista = [(random.randint(1,50)) for _ in range(1,50)]
+# numero = int(input('Insira um numero: '))
 
-pares = combinacao_numeros(lista, numero)
-print(f'Lista: {lista}')
-print(f'Combinações possíves: {pares}')
+# pares = combinacao_numeros(lista, numero)
+# print(f'Lista: {lista}')
+# print(f'Combinações possíves: {pares}')
 
 
 # 5. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
 # ----------------------------------------------------------------------------------------------
+
+estoque: dict = {
+    "banana": 3,
+    "abacaxi": 5,
+    "laranja": 2,
+    "manga": 4,
+    "uva": 1
+}
+
+def ordenar_chaves(dictionary: dict) -> list:
+    return sorted(dictionary)
+    
+print(ordenar_chaves(estoque))
+
