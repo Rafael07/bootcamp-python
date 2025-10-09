@@ -25,5 +25,9 @@ O programa deve ser capaz de:
 
 Este projeto é uma excelente oportunidade para aplicar técnicas de manipulação de dados em larga escala, otimização de desempenho e uso inteligente de estruturas como dicionários, agregadores e ordenadores em Python.
 
+## Contribuições ao projeto
+
+No momento, a contribuição dada foi o acréscimo do UV como gerenciador de pacotes do projeto, como alternativa ao Poetry.
+
 ## Link para o repositório no GitHub
 [The One Billion Row Challenge](https://github.com/Rafael07/One-Billion-Row-Challenge-Python)
