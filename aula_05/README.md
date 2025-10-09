@@ -24,3 +24,6 @@ O programa deve ser capaz de:
 - Exibir os resultados em uma tabela ordenada alfabeticamente pelo nome da estação
 
 Este projeto é uma excelente oportunidade para aplicar técnicas de manipulação de dados em larga escala, otimização de desempenho e uso inteligente de estruturas como dicionários, agregadores e ordenadores em Python.
+
+## Link para o repositório no GitHub
+[The One Billion Row Challenge](https://github.com/Rafael07/One-Billion-Row-Challenge-Python)
