@@ -12,12 +12,12 @@ Cada aula está organizada em uma pasta separada dentro deste repositório, cont
 
 |  Aula   | Tópico |
 |---------|--------|
-| Aula 01 | Python, Git e VSCode: Python do Zero |
-| Aula 02 | TypeError, Type Check, Type Conversion, try-except e if |
-| Aula 03 | Controle de Fluxo: DEBUG, IF, FOR, While, Listas e Dicionários |
-| Aula 04 | Tipos complexos e Type Hint (Dicionários vs DataFrames vs Tabelas vs Excel) |
-| Aula 05 | Projeto 01: Leitura e Escrita de Arquivos, lendo 1 bilhão de linhas |
-| Aula 06 | Exercício de revisão |
+| [Aula 01](https://github.com/Rafael07/bootcamp-python/tree/main/aula_01) | Python, Git e VSCode: Python do Zero |
+| [Aula 02](https://github.com/Rafael07/bootcamp-python/tree/main/aula_02) | TypeError, Type Check, Type Conversion, try-except e if |
+| [Aula 03](https://github.com/Rafael07/bootcamp-python/tree/main/aula_03) | Controle de Fluxo: DEBUG, IF, FOR, While, Listas e Dicionários |
+| [Aula 04](https://github.com/Rafael07/bootcamp-python/tree/main/aula_04) | Tipos complexos e Type Hint (Dicionários vs DataFrames vs Tabelas vs Excel) |
+| [Aula 05](https://github.com/Rafael07/bootcamp-python/tree/main/aula_05) | Projeto 01: Leitura e Escrita de Arquivos, lendo 1 bilhão de linhas |
+| [Aula 06](https://github.com/Rafael07/bootcamp-python/tree/main/aula_06) | Exercício de revisão |
 | Aula 07 | Funções em Python e Estrutura de Dados - Parte 1 |
 | Aula 08 | Funções em Python e Estrutura de Dados - Parte 2 |
 | Aula 09 | Funções em Python e Estrutura de Dados - Parte 3 |
