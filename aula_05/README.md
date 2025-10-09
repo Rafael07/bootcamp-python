@@ -1,4 +1,4 @@
-# Projeto 01: Um Bilhão de Linhas  
+# Auala 05 - Projeto Um Bilhão de Linhas  
 ### Desafio de Processamento de Dados com Python
 
 Este projeto tem como objetivo demonstrar como processar eficientemente um arquivo massivo contendo **1 bilhão de linhas** (aproximadamente 14GB), utilizando Python para realizar operações estatísticas pesadas como **agregação** e **ordenação**.
