@@ -5,5 +5,26 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "blue>=0.9.1",
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "isort>=6.1.0",
+    "pre-commit>=4.3.0",
+    "taskipy>=1.14.1",
 ]
+
+[tool.isort]
+profile = "black"
+exclude = [".venv", "venv"]
+
+[tool.black]
+exclude = [".venv", "venv"]
+
+[tool.flake8]
+exclude = [".venv", "venv"]
+
+[tool.taskipy.tasks]
+format = """
+    isort {args}
+    black {args}
+    flake8 {args}
+"""
