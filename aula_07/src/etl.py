@@ -1,6 +1,5 @@
 import csv
 import os
-import pprint
 from collections import defaultdict
 
 path_csv_file = os.path.join(os.path.dirname(__file__), "..", "files", "vendas.csv")
@@ -59,8 +58,8 @@ def formated_output(
     }
 
 
-minha_lista = read_csv(path_csv_file)
-meu_filtro = group_by_category(minha_lista)
-vendas = total_sales_by_product(meu_filtro)
+# minha_lista = read_csv(path_csv_file)
+# meu_filtro = group_by_category(minha_lista)
+# vendas = total_sales_by_product(meu_filtro)
 
-pprint.pprint(formated_output(vendas))
+# pprint.pprint(formated_output(vendas))
