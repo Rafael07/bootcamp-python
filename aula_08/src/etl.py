@@ -24,12 +24,12 @@ def kpi_total_sales(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def load_data(df: pd.DataFrame, input: list):
+def load_data(df: pd.DataFrame, input_list: list):
     """
     Dada entrada de uma opção salva em lista,
     definir se arquivo e salvo em csv ou parquet
     """
-    for item in input:
+    for item in input_list:
         if item == "csv":
             output_path = os.path.join(files_path, "data.csv")
             df.to_csv(output_path, index=False)
